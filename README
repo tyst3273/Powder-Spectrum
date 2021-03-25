@@ -1,0 +1,14 @@
+use the codes in code/python to generate a list of Q points on the surface of a sphere.
+
+use run_sqw_v2 and auto_sqw_v2 to call snaxs and generate the sqw for each q point. 
+
+these will produce out_*.mat and out_*_delta_fn.mat. the first one has the colormap sqe 
+array in it. this includes resoultion broadening, kinematic cutoff, and all options set
+in auto_sqw_v2. the delta_fn one has the intensities as delta_fns in energy. these can 
+be used to produce your own colormaps, etc.
+
+note that the delta_fn one is typical .mat file that can be read by scipy.io.loadmat 
+where as the other one is for storing large variables and is the matlab v7.3 type. this
+can be read by h5py.
+
+the plot scripts in code/plot can be used to plot the outputs of snaxs.
